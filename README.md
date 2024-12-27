@@ -22,3 +22,33 @@ API принимает изображения листьев картофеля 
         "2-Late_Blight": 2
     }
 }
+```
+
+# Установка и запуск
+
+### Клонируйте репозиторий:
+```sh
+git clone https://github.com/niyaz121221324/PotatoDisease.API.git
+cd PotatoDisease.API
+```
+
+### Запуск приложения
+```sh
+docker-compose up --build
+```
+
+### Пример Использования
+### Загрузка изображения для анализа
+Отправьте POST запрос на /predict с изображением листа картофеля:
+```sh
+curl -X POST "http://localhost:8080/predict" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@/path/to/your/image.jpg"
+```
+
+### Ответ сервера
+Ответ будет содержать предсказанный класс и вероятность:
+```json
+{
+    "predicted_class": "1-Early_Blight",
+    "confidence": 0.95
+}
+```
