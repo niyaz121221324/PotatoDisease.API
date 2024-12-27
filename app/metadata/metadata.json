@@ -1,0 +1,8 @@
+{
+    "class_indices": 
+    {
+        "0-Healthy": 0, 
+        "1-Early_Blight": 1, 
+        "2-Late_Blight": 2
+    }
+}
