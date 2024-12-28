@@ -52,7 +52,7 @@ async def predict(file: UploadFile = File(...)):
 
     return JSONResponse(
         content={
-            "class": class_names[predicted_class],
+            "className": class_names[predicted_class],
             "confidence": confidence,
         }
     )
