@@ -76,7 +76,7 @@ curl -X POST "http://localhost:8080/predict" -H "accept: application/json" -H "C
 Ответ будет содержать предсказанный класс и вероятность:
 ```json
 {
-    "predictedClass": "1-Early_Blight",
+    "predictedClass": "Potato___Early_blight",
     "confidence": 0.95
 }
 ```
