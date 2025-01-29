@@ -67,7 +67,7 @@ docker-compose up --build
 
 ### Пример Использования
 ### Загрузка изображения для анализа
-Отправьте POST запрос на /predict с изображением листа картофеля:
+Отправьте POST запрос на /predict с изображением листа или клубня картофеля:
 ```sh
 curl -X POST "http://localhost:8080/predict" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@/path/to/your/image.jpg"
 ```
