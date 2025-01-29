@@ -19,7 +19,7 @@ model = load_model()
 
 def serialize_to_dict(json_data):
     class_indices = json_data["class_indices"]
-    serialized_dict = {value: key.split("-", 1)[1] for key, value in class_indices.items()}
+    serialized_dict = {value: key for key, value in class_indices.items()}
     return serialized_dict
 
 with open(METADATA_PATH, "r") as f:

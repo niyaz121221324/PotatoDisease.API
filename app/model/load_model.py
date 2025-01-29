@@ -5,7 +5,7 @@ def load_model():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Формируем относительный путь к модели
-    model_path = os.path.join(current_dir, 'potato_0heal_1light_2late.h5')
+    model_path = os.path.join(current_dir, 'model.keras')
 
     # Загружаем модель
     if os.path.exists(model_path):
