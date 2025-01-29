@@ -1,22 +1,8 @@
 {
     "class_indices": 
     {
-        "Bacterial_soft_rot_of_potato": 0, 
-        "Potato___Early_blight": 1, 
-        "Potato___Late_blight": 2, 
-        "Potato___healthy": 3, 
-        "Potato_anthracnose": 4, 
-        "Potato_bacterial_wilt": 5, 
-        "Potato_black_scurf": 6, 
-        "Potato_black_shank_disease": 7, 
-        "Potato_common_scab": 8, 
-        "Potato_dry_rot": 9, 
-        "Potato_early_blight": 10, 
-        "Potato_late_blight": 11, 
-        "Potato_verticillium_wilt": 12, 
-        "Potato_wart_disease": 13, 
-        "Potato_wilt": 14, 
-        "Powdery_scab_of_potato": 15, 
-        "potato_bacterial_ring_rot": 16
+        "Potato___Early_blight": 0, 
+        "Potato___Late_blight": 1, 
+        "Potato___healthy": 2
     }
 }
