@@ -1,13 +1,27 @@
 # PotatoDesease.API
 
-Это проект API на FastAPI, который оборачивает модель машинного обучения для анализа качества картофеля по его листьям. Проект использует TensorFlow и Docker для контейнеризации.
+Это проект API на FastAPI, который оборачивает модель машинного обучения для анализа качества картофеля по его листьям и клубням. Проект использует TensorFlow и Docker для контейнеризации.
 
 ## Описание
 
-API принимает изображения листьев картофеля и классифицирует их по трём категориям:
-- Здоровый (`0-Healthy`)
-- Ранний фитофтороз (`1-Early_Blight`)
-- Поздний фитофтороз (`2-Late_Blight`)
+API принимает изображения листьев и клубней картофеля и классифицирует их по категориям:
+- Бактериальная мягкая гниль картофеля (`Bacterial_soft_rot_of_potato`)
+- Здоровый по листьям (`Healthy`)
+- Ранний фитофтороз по листьям (`Early_Blight`)
+- Поздний фитофтороз по листьям (`Late_Blight`)
+- Антракноз картофеля (`Potato_anthracnose`)
+- Бактериальное увядание картофеля (`Potato_bacterial_wilt`)
+- Чёрная парша картофеля (`Potato_black_scurf`)
+- Чёрная ножка картофеля (`Potato_black_shank_disease`)
+- Обыкновенная язва картофеля (`Potato_common_scab`)
+- Сухая гниль картофеля (`Potato_dry_rot`)
+- Ранний фитофтороз по клубням (`Potato_early_blight`)
+- Поздний фитофтороз по клубням (`Potato_late_blight`)
+- Вертициллезное увядание картофеля (`Potato_verticillium_wilt`)
+- Бородавчатая болезнь картофеля (`Potato_wart_disease`)
+- Увядание картофеля (`Potato_wilt`)
+- Порошковая язва картофеля (`Powdery_scab_of_potato`)
+- кольцевая бактериальная гниль картофеля (`potato_bacterial_ring_rot`)
 
 ## Метаданные
 
@@ -17,9 +31,23 @@ API принимает изображения листьев картофеля 
 {
     "class_indices": 
     {
-        "0-Healthy": 0, 
-        "1-Early_Blight": 1, 
-        "2-Late_Blight": 2
+        "Bacterial_soft_rot_of_potato": 0, 
+        "Potato___Early_blight": 1, 
+        "Potato___Late_blight": 2, 
+        "Potato___healthy": 3, 
+        "Potato_anthracnose": 4, 
+        "Potato_bacterial_wilt": 5, 
+        "Potato_black_scurf": 6, 
+        "Potato_black_shank_disease": 7, 
+        "Potato_common_scab": 8, 
+        "Potato_dry_rot": 9, 
+        "Potato_early_blight": 10, 
+        "Potato_late_blight": 11, 
+        "Potato_verticillium_wilt": 12, 
+        "Potato_wart_disease": 13, 
+        "Potato_wilt": 14, 
+        "Powdery_scab_of_potato": 15, 
+        "potato_bacterial_ring_rot": 16
     }
 }
 ```
