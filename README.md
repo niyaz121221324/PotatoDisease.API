@@ -4,11 +4,10 @@
 
 ## Описание
 
-API принимает изображения листьев и клубней картофеля и классифицирует их по категориям:
+API принимает изображения листьев и клубней, сначала определяя их категорию с помощью модели general_classifier. В зависимости от результата, изображения классифицируются по соответствующей модели: для листьев — одна, для клубней — другая.
+
+Анализ клубней:
 - Бактериальная мягкая гниль картофеля (`Bacterial_soft_rot_of_potato`)
-- Здоровый по листьям (`Healthy`)
-- Ранний фитофтороз по листьям (`Early_Blight`)
-- Поздний фитофтороз по листьям (`Late_Blight`)
 - Антракноз картофеля (`Potato_anthracnose`)
 - Бактериальное увядание картофеля (`Potato_bacterial_wilt`)
 - Чёрная парша картофеля (`Potato_black_scurf`)
@@ -23,31 +22,48 @@ API принимает изображения листьев и клубней �
 - Порошковая язва картофеля (`Powdery_scab_of_potato`)
 - кольцевая бактериальная гниль картофеля (`potato_bacterial_ring_rot`)
 
+## Метаданные клубней
+
+Файл `tuber_metadata.json` содержит информацию о классах по клубням:
+
+```json
+{
+  "class_indices": 
+  {
+    "Bacterial_soft_rot_of_potato": 0,
+    "Potato_anthracnose": 1,
+    "Potato_bacterial_wilt": 2,
+    "Potato_black_scurf": 3,
+    "Potato_black_shank_disease": 4,
+    "Potato_common_scab": 5,
+    "Potato_dry_rot": 6,
+    "Potato_early_blight": 7,
+    "Potato_late_blight": 8,
+    "Potato_verticillium_wilt": 9,
+    "Potato_wart_disease": 10,
+    "Potato_wilt": 11,
+    "Powdery_scab_of_potato": 12,
+    "potato_bacterial_ring_rot": 13
+  }
+}
+  
+```
+Анализ 
+- Здоровый по листьям (`Healthy`)
+- Ранний фитофтороз по листьям (`Early_Blight`)
+- Поздний фитофтороз по листьям (`Late_Blight`)
+
 ## Метаданные
 
-Файл `metadata.json` содержит информацию о классах:
+Файл `leaves_metadata.json` содержит информацию о классах листьев:
 
 ```json
 {
     "class_indices": 
     {
-        "Bacterial_soft_rot_of_potato": 0, 
-        "Potato___Early_blight": 1, 
-        "Potato___Late_blight": 2, 
-        "Potato___healthy": 3, 
-        "Potato_anthracnose": 4, 
-        "Potato_bacterial_wilt": 5, 
-        "Potato_black_scurf": 6, 
-        "Potato_black_shank_disease": 7, 
-        "Potato_common_scab": 8, 
-        "Potato_dry_rot": 9, 
-        "Potato_early_blight": 10, 
-        "Potato_late_blight": 11, 
-        "Potato_verticillium_wilt": 12, 
-        "Potato_wart_disease": 13, 
-        "Potato_wilt": 14, 
-        "Powdery_scab_of_potato": 15, 
-        "potato_bacterial_ring_rot": 16
+        "Potato___Early_blight": 0, 
+        "Potato___Late_blight": 1, 
+        "Potato___healthy": 2
     }
 }
 ```
